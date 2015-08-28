@@ -215,7 +215,7 @@ $translations->addFromPoFile('locales/more-en.po');
 $translations->toMoFile('locales/en.mo');
 ```
 
-To import translations, the methods are static and named `from + [Extractor] + [File/String]`, for example `fromPhpArrayFile` or `fromJsCodeString`. To export or add more translations use the methods named `addFrom + [Generator] + [File/String]` (to add) or  `to + [Generator] + [File/String]` (to export) for example `fromPhpCodeFile`, `toPhpArrayFile` or `toPoString`.
+To import translations, the methods are static and named `from + [Extractor] + [File/String]`, for example `fromPhpArrayFile` or `fromJsCodeString`. To export or add more translations use the methods named `addFrom + [Generator] + [File/String]` (to add) or  `to + [Generator] + [File/String]` (to export) for example `addFromPhpCodeFile`, `toPhpArrayFile` or `toPoString`.
 
 ## Translator
 
@@ -323,6 +323,7 @@ The second argument of `mergeWith` defines how the merge will be done. You can p
 
 * MERGE_ADD: Adds the translations from translations2 to translations1 if they not exists
 * MERGE_REMOVE: Removes the translations in translations1 if they are not in translations2
+* MERGE_OVERRIDE: Overrides the translations in translations1 if they are in translations2
 * MERGE_HEADERS: Merges the headers from translations2 to translations 1
 * MERGE_REFERENCES: Merges the references from translations2 to translations1
 * MERGE_COMMENTS: Merges the comments from translations2 to translations1
